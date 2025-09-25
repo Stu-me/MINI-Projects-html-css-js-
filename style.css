@@ -1,0 +1,65 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+    margin:auto;
+    font-family : "Inter", sans-serif;;
+    color: white;
+    background-color:  rgb(16, 16, 3);
+}
+ 
+nav{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    gap:3rem;
+    border-bottom: solid 1px #aaa;
+    background-color: lightblue;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+nav a{
+    display:inline-block;
+    min-width:9px;
+    padding:0.5rem;
+    border-radius:0.5rem;
+    border:solid 1.5px rgb(22,22,22);
+    text-align:center;
+    text-decoration: sienna;
+    color: #1b1b1b;
+}
+nav a[aria-current='page']{
+    color:rgb(232, 218, 218);
+    background-color: rgb(42, 35, 231);
+}
+nav a[target = "_blank"]{
+    color: rgb(251, 247, 247);
+    background-color: rgb(218, 32, 32);
+}
+
+main{
+    padding:1rem;
+}
+h1{
+    font-weight: bold;
+    font-size: 1.5rem;
+    align-items: center;
+}
+
+.projects{ /* here we put . to identify it as the class */
+    display: flex;
+    flex-direction: column;
+}
+.project-line{
+    background-color: #eee8e8;
+    padding: 10px 30px;
+    border-radius:8px ;
+    color:#1b1b1b;
+    text-decoration: none;
+    border: 2px solid #121212;
+    margin-top:5px;
+}
