@@ -13,6 +13,16 @@ form.addEventListener('submit',(e)=>{
     }
     else{
         const bmi = (weight/((height*height)/10000)).toFixed(2);
-        results.innerHTML = `${bmi}`;
+        results.innerHTML = `<span>${bmi}</span>`;
+        const bmiINdx = document.querySelector("#bmiIndex");
+        if(bmi<18.6){
+            bmiINdx.innerHTML = `Your are Underweight`;
+        }
+        else if(bmi>=18.6 && bmi<24.9){
+            bmiINdx.innerHTML = `Your are Healthy`;
+        }
+        else{
+            bmiINdx.innerHTML = `Your are Overweight`;
+        }
     }
 });

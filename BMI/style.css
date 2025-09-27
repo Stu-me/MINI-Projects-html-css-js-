@@ -45,3 +45,9 @@ h1{
     background: linear-gradient(to right, #FFF94C, #004FF9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 }
+#bmiIndex{
+    font-size: large;
+    font-style: italic;
+    font-weight: 700;
+    color: #0b9696;
+}
