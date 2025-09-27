@@ -1,0 +1,47 @@
+
+main{
+    text-align: center;
+   background: #eacda3;  /* fallback for old browsers */
+   background: -webkit-linear-gradient(to right, #d6ae7b, #eacda3);  /* Chrome 10-25, Safari 5.1-6 */
+   background: linear-gradient(to right, #d6ae7b, #eacda3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    /* width: 575px;
+    height: 825px; */
+}
+#weight-guide{
+   color: #212121;
+}
+#height,#weight{
+    height: 30px;
+    border-radius: 5px;
+}
+#results{
+    font-size: 35px;
+    margin-left: 90px;
+    margin-top: 20px;
+    background: #000428;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #004e92, #000428);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #004e92, #000428); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    color: #7BC6CC;
+
+}
+button{
+    width: 150px;
+    height: 30px;
+    background: #F7F8F8;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ACBB78, #F7F8F8);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ACBB78, #F7F8F8); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+   border-radius: 6px;
+   color: #212121;
+   border: 2px solid #212121;
+   font-size: 20px;
+}
+h1{
+    color: #212121;
+    background: #004FF9;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FFF94C, #004FF9);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FFF94C, #004FF9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
