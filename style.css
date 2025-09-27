@@ -17,7 +17,9 @@ nav{
     padding: 1rem;
     gap:3rem;
     border-bottom: solid 1px #aaa;
-    background-color: lightblue;
+     /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2c3e50, #bdc3c7);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2c3e50, #bdc3c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     font-size: 20px;
     font-weight: 700;
 }
@@ -27,14 +29,17 @@ nav a{
     min-width:9px;
     padding:0.5rem;
     border-radius:0.5rem;
-    border:solid 1.5px rgb(22,22,22);
+    border:solid 1px rgb(22,22,22);
     text-align:center;
-    text-decoration: sienna;
+    text-decoration: rgb(199, 90, 40);
     color: #1b1b1b;
 }
 nav a[aria-current='page']{
     color:rgb(232, 218, 218);
-    background-color: rgb(42, 35, 231);
+    background: #8E2DE2;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #4A00E0, #8E2DE2);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #4A00E0, #8E2DE2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 nav a[target = "_blank"]{
     color: rgb(251, 247, 247);

@@ -26,34 +26,3 @@ body{
 #yellow{background-color: rgb(255, 255, 0);}
 #orange{background-color: rgba(241, 166, 27, 0.814);}
 #default{background: black;}
-nav{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem;
-    gap:3rem;
-    border-bottom: solid 1px #aaa;
-    background-color: lightblue;
-    font-size: 20px;
-    font-weight: 700;
-}
-
-nav a{
-    display:inline-block;
-    min-width:9px;
-    padding:0.5rem;
-    border-radius:0.5rem;
-    border:solid 1.5px rgb(22,22,22);
-    text-align:center;
-    text-decoration: sienna;
-    color: #1b1b1b;
-}
-nav a[aria-current='page']{
-    color:rgb(232, 218, 218);
-    background-color: rgb(42, 35, 231);
-}
-nav a[target = "_blank"]{
-    color: rgb(251, 247, 247);
-    background-color: rgb(218, 32, 32);
-}
