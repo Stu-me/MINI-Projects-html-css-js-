@@ -79,3 +79,29 @@ p{
     from{opacity:0; transform:translateY(-5px);}
     to{opacity:1; transform:translateY(0);}
 }
+/* #alert{
+    display: none;
+  background-color: #ff4d4d;
+  color: white;
+  padding: 10px 12px;
+  margin-top: 10px;
+  border-radius: 6px;
+  font-weight: 600;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  animation: fadeIn 0.25s ease-in;
+}
+/* @keyframes shake{
+    0%   { transform: translateX(0); }
+  15%  { transform: translateX(-8px); }
+  30%  { transform: translateX(8px); }
+  45%  { transform: translateX(-6px); }
+  60%  { transform: translateX(6px); }
+  75%  { transform: translateX(-3px); }
+  90%  { transform: translateX(3px); }
+  100% { transform: translateX(0); }
+}
+.shake{
+  animation: shake 500ms cubic-bezier(.36,.07,.19,.97);
+  border: 2px solid #ff3b3b;     visible red border while shaking 
+  box-shadow: 0 6px 18px rgba(255,59,59,0.12);
+}  */
