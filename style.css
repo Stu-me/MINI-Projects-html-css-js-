@@ -3,8 +3,8 @@
 }
 
 body {
-    margin:auto;
-    font-family : "Inter", sans-serif;;
+    margin:0px,20px,20px,20px;
+    font-family : "Inter", sans-serif;
     color: white;
     background-color:  rgb(16, 16, 3);
 }

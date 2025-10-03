@@ -14,10 +14,12 @@
         <a target="_blank" href="https://www.youtube.com/@chaiaurcode" rel = "noopener noreferrer">Youtube</a>
     </nav>
     <main>
-        <div id = "header">
+        <div id = "upperDecalaration">
             <h1 id="title">Number guessing game</h1>
-            <p>Try and guess a random number between 1 and 100!</p>
-            <p>You have 10 attempts to guess the right number.</p>
+            <div id="belowTitle">
+              <p>Try and guess a random number between 1 and 100!</p>
+              <p>You have 10 attempts to guess the right number.</p>
+            </div>
             <br>
             <form class = "form">
                 <label for="guessField" id="guess">Guess a number</label>
@@ -25,10 +27,12 @@
                 <input type="submit" id="subt" value="Submit guess" class="guessField">
             </form>
 
-            <div class="resultParas">
+            <div class="resultPart">
                <p>Previous Guesses :<span class="guesses"></span></p>
                <p>Guess Remaining: <span class="output">10</span></p>
-               <p class="lowOrHi"></p>
+               <p class="message"></p>
+               <label for="start"></label>
+               <input type="SUBMIT"  id="start">
             </div>
            
         </div>

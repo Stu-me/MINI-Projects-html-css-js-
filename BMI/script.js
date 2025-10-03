@@ -25,4 +25,4 @@ form.addEventListener('submit',(e)=>{
             bmiINdx.innerHTML = `Your are Overweight`;
         }
     }
-});
+}); 

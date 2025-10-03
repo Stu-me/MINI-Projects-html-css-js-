@@ -8,7 +8,7 @@ body{
 #title{
     background-color: black;
 }
-.lastResult{
+.lastResults{
     color: white;
     padding: 7px;
 }
@@ -19,7 +19,7 @@ button{
     height: 50px;
     border-radius: 0.9rem;
 }
-#subt{
+ #subt{  /*inside the button */
   background-color: #161616;
   color: #ffffff;
   width: 200px;
@@ -60,4 +60,8 @@ p{
     margin-top: 1em;
     padding: 20px 50px;
     
+}
+.lowOrHi{
+    background-color: rgb(60, 101, 138);
+    color: #000;
 }
