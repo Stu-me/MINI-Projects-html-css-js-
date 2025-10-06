@@ -8,11 +8,12 @@ const lowORHi =  document.querySelector('.lowOrHi');    // a empty paragraph at 
 const startOver = document.querySelector('.resutlParas'); // the outer box that covers lastresult and gueses
 const message = document.querySelector('#message');
 
+const p  = document.createElement('p');
 let arrGuess = []; // array to store the previous result
 let numGuess = 10;  // num that will count the remaining guess
 
-let palyGame = true; // checker that will tell the user if he can play more or not 
-if(palyGame){
+let playGame = true; // checker that will tell the user if he can play more or not 
+if(playGame){
     // start();
     submit.addEventListener('click',(e)=>{
         e.preventDefault();
@@ -70,6 +71,17 @@ function displayMessage(mess){
 function updateStatsForWrongVal(value){
     // maybe wrong values ko display krna hai 
 }
+function end(){
+    displayMessage('Game over .................. wait to reset the components');
+    userInput.value = '';
+    userInput.setAttribute('disabled', '');
+    p.classList.add('button');
+    p.innerHTML = `<h2 id="newGame">Start new Game</h2>`;
+    startOver.appendChild(p);
+  playGame = false;
+  newGame();
+}
+
 function start(){
     displayMessage('Game starting...................');
     setTimeout(() => {
@@ -79,11 +91,5 @@ function start(){
         displayMessage('GAME STARTED');
     }, 3000);
     end();g
-}
-function end(){
-    displayMessage('Game over .................. wait to reset the components');
-    setTimeout(()=>{
-        start();
-    },2000)
 }
 

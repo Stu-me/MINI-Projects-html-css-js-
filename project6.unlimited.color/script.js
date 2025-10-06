@@ -19,12 +19,13 @@ const changingColorFunc = function(){
     const changeBg = function(){
         document.body.style.backgroundColor = createColor();
     }
-    intervalId  = setInterval(changeBg,500);
+    if(!intervalId) intervalId  = setInterval(changeBg,500);
 }
 //function
 const stopChanging = function(){
     clearInterval(intervalId);
     document.body.style.backgroundColor = 'black';
+    intervalId = null;
 }
 
 document.querySelector('#start').addEventListener('click',changingColorFunc)
