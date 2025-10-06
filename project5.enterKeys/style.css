@@ -1,0 +1,18 @@
+#declaration{
+    text-align: center;
+    font-size: x-large;
+    font-weight: 800;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 5%;
+    margin-top: 10%;
+}
+table{
+    width: 70%;
+  border-collapse: collapse;
+  margin: 30px auto;
+}
+th,td{
+    border: 2px,solid ,white;
+    text-align: center;
+    padding: 0.5rem;
+}
