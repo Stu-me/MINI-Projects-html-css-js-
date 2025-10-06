@@ -78,6 +78,7 @@ function start(){
         guessSlot.innerHTML = arrGuess;
         displayMessage('GAME STARTED');
     }, 3000);
+    end();g
 }
 function end(){
     displayMessage('Game over .................. wait to reset the components');
