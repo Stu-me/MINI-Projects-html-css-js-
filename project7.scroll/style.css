@@ -1,0 +1,27 @@
+* {
+  box-sizing: border-box;
+}
+body{
+    background: #454543;
+}
+#title{
+    text-align: center;
+    font-size: larger;
+    font-weight: 700;
+}
+.scroll-indicator{
+   height: 10px;
+  width: calc(100% - 6em);
+  position: fixed;
+  top: 10px;
+  left: 3em;
+  border-radius: 3px;
+}
+.scroll-indicator .progress {
+  height: 100%;
+  width: 0;
+  border-radius: 3px;
+  /* https://www.grabient.com/ */
+  background: linear-gradient(30deg, #21d4fd, #b721ff);
+  transition: width 0.5s;
+}

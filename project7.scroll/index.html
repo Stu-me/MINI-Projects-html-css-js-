@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="script.js"></script>
+</head>
+<body>
+    <div id="title">
+        <h1>-------- System design --------- </h1>
+    </div>
+    <main>
+        <div id="firstPrg">
+            <h3>What Is System Design?</h3>
+            <p>System design is the process of defining the architecture, components, modules, interfaces, and overall structure of a system to meet specified requirements and goals. It involves creating a blueprint that outlines how various elements interact and work together to achieve the desired functionality, performance, and reliability.
+            <br>    
+This is part of an extensive series of guides about software development.</p>
+        </div>
+        <div id="secPrg">
+            <h3>System Design vs. Software Design</h3>
+            <p>System design and software design are related but distinct concepts in the context of software development. They both involve creating a blueprint for a system or application but focus on different aspects and levels of abstraction. Here are several important concepts that play a role in modern system design.</p>
+            <ul>
+                <li><h3>Horizontal and Vertical Scaling</h3></li>
+                <p>Horizontal scaling is the process of adding more nodes (servers or instances) to a system to distribute the load and increase its capacity. This approach improves system performance and reliability by allowing it to handle more requests simultaneously. Horizontal scaling is often used in cloud environments and can be achieved through load balancing or sharding (splitting a software system into a few instances, each holding part of the data).
+
+Vertical scaling involves adding more resources (CPU, memory, storage) to an existing node or server, thus increasing its capacity to handle a higher workload. This can be achieved by upgrading the hardware or allocating more resources in a virtualized environment. Vertical scaling has limitations due to hardware constraints and can result in downtime during the scaling process.</p>
+                <li><h3>Redundancy and Replication</h3></li>
+                <p>Redundancy is the duplication of critical system components or data to improve reliability and fault tolerance. Replication is the process of creating and maintaining multiple copies of data across different nodes in a distributed system. Both redundancy and replication are used to ensure system availability, fault tolerance, and data durability in the face of hardware failures or network partitions.</p>
+                <li><h3>Microservices Architecture</h3></li>
+                <p>Microservices is an architectural pattern where a large application is broken down into smaller, independent, and loosely-coupled services. Each microservice is responsible for a specific functionality and communicates with other services via APIs. This approach promotes modularity, scalability, and ease of maintenance, allowing individual services to be developed, deployed, and scaled independently.</p>
+                <li><h3>CAP Theorem</h3></li>
+                <p>The CAP theorem, also known as Brewer’s theorem, states that a distributed system can only achieve two of the following three guarantees at any given time: consistency, availability, and partition tolerance.
+                Consistency ensures that all nodes see the same data at the same time, availability guarantees that the system will respond to every request, and partition tolerance ensures that the system continues to function even if communication between nodes is disrupted.</p>
+                <li>Proxy Servers</li>
+                <p>A proxy server is an intermediary between clients and servers that acts as a gateway, forwarding requests from clients to the appropriate servers. Proxy servers can be used for load balancing, security, caching, and other purposes. They can help improve performance, distribute traffic, and protect backend servers from malicious traffic.</p>
+                <li>Message Queues</li>
+                <p>Message queues are a communication mechanism used in distributed systems to decouple components and enable asynchronous processing. They store and transmit messages between components, allowing them to operate independently and scale without being directly affected by each other’s workload. Message queues help improve system reliability, fault tolerance, and scalability.</p>
+                <li>File Systems</li>
+                <p>A file system is a method of organizing and storing data on a storage device such as a hard drive, SSD, or other media. It manages files and directories, controls access to data, and ensures data integrity.
+                 File systems can be local (stored on a single device) or distributed (spanning across multiple devices in a network), providing different levels of performance, scalability, and fault tolerance.</p>            
+            </ul>
+        </div>
+        <div id="thirdPrg">
+            <h3>System Design Architecture and Patterns</h3>
+            <p>
+                Here are some of the most common design patterns used to build software applications.
+                <ul>
+                    <li><h3>Two-Phase Commit (2PC)</h3></li>
+                    <p>
+                        2PC is a distributed transaction protocol that ensures data consistency across multiple resources or services in a distributed system. It is a form of atomic commitment, which guarantees that either all parts of a transaction are committed or none are.
+                        The two phases are the prepare phase, where each participating resource votes on whether to commit or abort the transaction, and the commit phase, where the transaction coordinator decides the outcome based on the votes and informs the participants to either commit or abort.
+                    </p>
+                    <li><h3>Replicated Load-Balanced Services (RLBS)</h3></li>
+                    <p>
+                        RLBS is an architectural pattern where multiple instances of a service are deployed and managed by a load balancer, which distributes incoming requests among the instances. This pattern improves system performance, reliability, and fault tolerance by allowing the system to handle more requests and recover from instance failures.
+                        Replication ensures that multiple copies of the service are available, while load balancing ensures that the workload is distributed evenly among the instances, preventing overloading and providing better response times.
+                        Command and Query Responsibility Segregation (CQRS)
+                        CQRS is an architectural pattern that separates the operations that modify data (commands) from the operations that read data (queries). By splitting these responsibilities into distinct components, CQRS enables greater flexibility, scalability, and maintainability.
+                        This separation allows for optimization of each component according to its specific requirements, such as using different data storage systems, scaling read and write operations independently, or implementing different levels of consistency and performance.
+                    </p>
+                    <li><h3>Saga</h3></li>
+                    <p>
+                        Saga is a pattern for managing long-lived transactions in a distributed system, particularly when 2PC is not feasible or desirable. A saga is a series of local transactions, each with a corresponding compensating action that can undo the effects of the transaction.
+                        If any local transaction fails, the compensating actions are executed in reverse order to rollback the saga. Sagas provide a way to maintain consistency across multiple services without relying on distributed locks or global transactions, trading off some consistency guarantees for increased availability and performance.
+                        To illustrate the Saga pattern, in an e-commerce application consisting of three microservices—Order Service, Inventory Service, and Payment Service—this pattern can be used to maintain consistency across services when a customer places an order. Local transactions and corresponding compensating actions are defined for each service:
+                        The Order Service creates and reserves an order, then cancels it and releases items if necessary.
+                        The Inventory Service updates stock levels for reserved items, then reverts them if items are released.
+                        The Payment Service processes a customer’s payment, then issues a refund if required.
+                        If any local transaction fails, the Saga pattern ensures that compensating actions are executed in reverse order to rollback the entire operation, maintaining consistency across all services without relying on distributed locks or global transactions.
+                    </p>
+                    <li><h3>Sharded Services</h3></li>
+                    <p>
+                        Sharding is a technique for partitioning data across multiple instances of a service or storage system to distribute the load and improve scalability. Each shard contains a subset of the total data and operates independently, allowing the system to handle more requests and store more data by adding more shards.
+                        Sharded services can be used in conjunction with load balancing and replication to achieve even better performance, scalability, and fault tolerance. However, sharding can also introduce complexity in data management, querying, and consistency.
+                    </p>
+                </ul>
+            </p>
+        </div>
+      <div class="scroll-indicator">
+      <div class="progress"></div>
+    </div>
+    </main>
+</body>
+</html>
