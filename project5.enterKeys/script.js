@@ -1,7 +1,8 @@
 const clicked = document.querySelector('#resultTable');
-
-window.addEventListener('click', checkInput); //will not work as called before declared - checkinput
-window.addEventListener('keydown', checkInput);
+const area = document.querySelector('main');
+area.addEventListener('click', checkInput); //will not work as called before declared - checkinput
+area.addEventListener('keydown', checkInput);
+area.focus();
 
 function checkInput(e) {
     e.preventDefault();
