@@ -9,6 +9,7 @@ window.addEventListener('scroll',()=>{
     const scrollTop = window.scrollY;
     const docHeight = document.documentElement.scrollHeight - window.innerHeight;
     const scrollRatio = scrollTop/docHeight; // 0.1 to 0.9
+    let timer; // declared here cause the cleartimout could work 
     
     const scrollPercentage = Math.trunc((scrollTop/docHeight)*100+1); // how much upper part moved by total height
 
@@ -19,8 +20,20 @@ window.addEventListener('scroll',()=>{
     const hue = scrollRatio*360; // hue is betwenn 0 to 360 now the value dynamically changes we made it related to scroll height0
     
     progress.style.background = `linear-gradient(30deg, hsl(${hue},80%,60%),hsl(${hue + 60},80%,60% ))`;
-    
     document.querySelector('body').style.background= `linear-gradient(30deg, hsl(${hue},80%,60%),hsl(${hue + 60},80%,60% ))`;
+
+    // document.querySelector('body').style.background = ;
+    document.querySelector('.progress').style.opacity = 1;
+
+    clearTimeout(timer);
+    
+    
+    /*---------------------------------------------------- hiding the bar after a time  ---------------------------------- */
+     timer = setTimeout(()=>{
+        document.querySelector('.progress').style.opacity = 0;
+        document.querySelector('body').style.color = '#d7c0c0ff';
+        document.querySelector('body').style.background = '#412f2fff';
+    },2000) 
 })
 /*
 window.scrollY
