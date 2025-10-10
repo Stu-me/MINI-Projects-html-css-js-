@@ -3,25 +3,36 @@
 }
 body{
     background: #454543;
+    color: #000;
 }
 #title{
+    padding-top: 7%;
     text-align: center;
     font-size: larger;
     font-weight: 700;
 }
+.percent{
+  font-weight: 500;
+  color: #1c1c1a;
+  background-color: aliceblue;
+}
 .scroll-indicator{
-   height: 10px;
+  height: 10px;
   width: calc(100% - 6em);
-  position: fixed;
+  position: fixed; /* makes the thing static and on the top of it lets try on the home*/
   top: 10px;
   left: 3em;
   border-radius: 3px;
 }
+nav{
+  position:fixed;
+  width: 100%;  
+}
 .scroll-indicator .progress {
   height: 100%;
   width: 0;
-  border-radius: 3px;
+  border-radius: 2px;
   /* https://www.grabient.com/ */
   background: linear-gradient(30deg, #21d4fd, #b721ff);
-  transition: width 0.5s;
+  transition: width 0.1s;
 }

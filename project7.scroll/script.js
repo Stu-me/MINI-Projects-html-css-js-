@@ -1,10 +1,26 @@
 const progress = document.querySelector('.progress');
+const progressPercentage = document.querySelector('.percent')
+/* window.scrollY - gives the area of how much length we have scrolled (measure of how much height of area top has hide in scrolling ) 
+   window.innerHeight - Height of the display area of the webpage (changes if we minimize shrink or expand);
+   document.documentElement.scrollHeight  -- give the total height for the webpage including the scrollable area
+ */ 
 
 window.addEventListener('scroll',()=>{
     const scrollTop = window.scrollY;
     const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-    const scrolled = (scrollTop/docHeight)*100; // how much upper part moved by total height
-    progress.style.width = scrollTop - 100 +'%'; // dynamically changing the width size in the css 
+    const scrollRatio = scrollTop/docHeight; // 0.1 to 0.9
+    
+    const scrollPercentage = Math.trunc((scrollTop/docHeight)*100+1); // how much upper part moved by total height
+
+    progressPercentage.innerHTML = scrollPercentage-1+'%';//window.scrolly window.scrollY
+
+    progress.style.width = scrollPercentage +'%'; // dynamically changing the width size in the css 
+
+    const hue = scrollRatio*360; // hue is betwenn 0 to 360 now the value dynamically changes we made it related to scroll height0
+    
+    progress.style.background = `linear-gradient(30deg, hsl(${hue},80%,60%),hsl(${hue + 60},80%,60% ))`;
+    
+    document.querySelector('body').style.background= `linear-gradient(30deg, hsl(${hue},80%,60%),hsl(${hue + 60},80%,60% ))`;
 })
 /*
 window.scrollY
